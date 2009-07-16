@@ -1,0 +1,32 @@
+#summary List of common how-tos
+
+=...change the background color?=
+
+  # Make sure to remove the inline style from the body tag.  This is accomplished by:
+  {{{
+  dojo.removeAttr(dojo.body(),'style');
+  }}}
+  and should already be present.
+  # Add a `background` or `background-color` property to the `body` style block.
+  # Make sure to add `allowtransparency="true"` to the `<iframe>` tag.  This is necessary for IE to display the background color properly.  
+
+=...change the calendar images?=
+
+The majority of the images are now contained in a single sprite sheet named `combined_v7.gif`. In previous versions, the images were separated into individual files.
+
+  # Download the latest sprite sheet from Google.
+  # Edit the file.
+  # Change all references in the stylesheet to point to your version, instead of the one from Google.  Typically, they will look like:
+  {{{
+  background-image: url(//calendar.google.com/googlecalendar/images/combined_v7.gif);
+  }}}
+  # Some images still are individual files, for example, the print icon.  Those should already point to the file in the `images` folder, so you should be able to edit it, and the change should be immediately visible.
+
+=...remove the Google logo?=
+
+Personally, I don't think you should do this, but here are the instructions anyway.
+
+  # Add `display:none` to the `.subscribe-image` style block.
+
+ 
+
