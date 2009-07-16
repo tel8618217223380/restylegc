@@ -1,3 +1,5 @@
+#summary Color codes to look for in the stylesheet
+
 Typical colors in the style sheet are:
 
   * `#c3d9ff` <b><font color="#c3d9ff">Example</font></b>
