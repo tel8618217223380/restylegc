@@ -1,0 +1,10 @@
+#summary Possible fixes to common problems.
+
+=All I see is a blank page.=
+
+If the display of the calendar is blank, that usually means your PHP configuration is wrong and most likely the curl module is not installed or disabled. Open the phpinfo.php file included in the zip file. This will list a bunch of debug information about your web server’s PHP configuration. If you do not see curl listed or curl is listed but disabled, then you will need to talk to your system administrator to fix it.
+
+=The event bubbles don't look right=
+
+This is caused by a mismatch between the JavaScript and stylesheet.  You'll need to update to the latest stylesheet.
+
