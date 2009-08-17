@@ -2,7 +2,7 @@
 
 =...know when a new version is released?=
 
-Subscribe to the Downloads RSS feed which is one of the <a href="http://code.google.com/p/restylegc/feeds">many that area available</a>.
+Subscribe to the Downloads RSS feed which is one of the <a href="http://code.google.com/p/restylegc/feeds">many that are available</a>.
 
 =...change the background color?=
 
