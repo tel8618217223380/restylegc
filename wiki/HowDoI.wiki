@@ -1,5 +1,9 @@
 #summary List of common how-tos
 
+=...know when a new version is released?=
+
+Subscribe to the Downloads RSS feed which is one of the <a href="http://code.google.com/p/restylegc/feeds">many that area available</a>.
+
 =...change the background color?=
 
   # Make sure to remove the inline style from the body tag.  This is accomplished by:
@@ -29,4 +33,3 @@ Personally, I don't think you should do this, but here are the instructions anyw
   # Add `display:none` to the `.subscribe-image` style block.
 
  
-
