@@ -28,11 +28,11 @@ The majority of the images are now contained in a single sprite sheet named `com
 
 =...display a specific date or date range?=
 
---There is an undocumented feature of Google Calendar that allows you to specify a date range.  Add the following variable to your query string:--
+<strike>There is an undocumented feature of Google Calendar that allows you to specify a date range.  Add the following variable to your query string:
 {{{
 dates=YYYYMMDD%2fYYYYMMDD
 }}}
---where YYYYMMDD represents a date as Year-Month-Day.  This is most useful when the mode is set to agenda, and you want to display future events and not just the current month's events.--
+where YYYYMMDD represents a date as Year-Month-Day.  This is most useful when the mode is set to agenda, and you want to display future events and not just the current month's events.</strike>
 
 This technique does not appear to work anymore.
 
