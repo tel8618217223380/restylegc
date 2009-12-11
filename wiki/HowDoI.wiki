@@ -7,10 +7,10 @@ Subscribe to the Downloads RSS feed which is one of the <a href="http://code.goo
 =...change the background color?=
 
   # Make sure to remove the inline style from the body tag.  This is accomplished by:
-  {{{
-  dojo.removeAttr(dojo.body(),'style');
-  }}}
-  and should already be present.
+    {{{
+    dojo.removeAttr(dojo.body(),'style');
+    }}} 
+    and should already be present.
   # Add a `background` or `background-color` property to the `body` style block.
   # Make sure to add `allowtransparency="true"` to the `<iframe>` tag.  This is necessary for IE to display the background color properly.  
 
