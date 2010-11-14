@@ -51,6 +51,7 @@
  *                      Updated Dojo version
  *                      Archived additional .js and .css files
  *   13 November 2010 - Changed Google Calendar protocol to https
+ *                      Switched back to jQuery
  *                      
  *   
  * ACKNOWLEDGMENTS:
@@ -142,20 +143,21 @@ $buffer = preg_replace($pattern, $replacement, $buffer);
 // Use DHTML to modify the DOM after the calendar loads
 $pattern = '/(<\/head>)/';
 $replacement = <<<RGC
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4.0/dojo/dojo.xd.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script type="text/javascript">
 function restylegc() {
     // remove inline style from body so background-color can be set using the stylesheet
-    dojo.removeAttr(dojo.body(),'style');
+    $('body').removeAttr('style');
 
     // iterate over each bubble and remove the width property from the style attribute
     // so that the width can be set using the stylesheet
-    dojo.query('.bubble').forEach(function(node){
-        dojo.attr(node, {style:{'width': ''}});
+    $('.bubble').each(function(){ 
+        style = $(this).attr('style').replace(/width: \d+px;?/i, ''); 
+        $(this).attr('style', style); 
     });
 
-    // see Dojo documentation for other ways to edit DOM
-    // http://dojotoolkit.org/
+    // see jQuery documentation for other ways to edit DOM
+    // http://docs.jquery.com/
 }
 </script>
 </head>
