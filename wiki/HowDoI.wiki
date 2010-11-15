@@ -8,7 +8,7 @@ Subscribe to the Downloads RSS feed which is one of the <a href="http://code.goo
 
   # Make sure to remove the inline style from the body tag.  This is accomplished by:
     {{{
-    dojo.removeAttr(dojo.body(),'style');
+    $('body').removeAttr('style');
     }}} 
     and should already be present.
   # Add a `background` or `background-color` property to the `body` style block.
@@ -16,7 +16,7 @@ Subscribe to the Downloads RSS feed which is one of the <a href="http://code.goo
 
 =...change the calendar images?=
 
-The majority of the images are now contained in a single sprite sheet named `combined_v7.gif`. In previous versions, the images were separated into individual files.
+The majority of the images are now contained in a single sprite sheet named, for example, `combined_v7.gif`. In previous versions, the images were separated into individual files.
 
   # Download the latest sprite sheet from Google.
   # Edit the file.
