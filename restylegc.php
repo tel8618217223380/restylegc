@@ -52,6 +52,7 @@
  *                      Archived additional .js and .css files
  *   13 November 2010 - Changed Google Calendar protocol to https
  *                      Switched back to jQuery
+ *   03 June     2011 - Put jQuery in no-conflict mode
  *                      
  *   
  * ACKNOWLEDGMENTS:
@@ -60,6 +61,7 @@
  *   TechTriad.com (http://techtriad.com/) for requesting and funding the 
  *       Javascript code to edit CSS properties and for selflessly letting the
  *       code be published for everyone's use and benefit.
+ *   Steve Sawaya (http://sawayaconsulting.com/) for the jQuery no-conflict patch
  *   
  *
  * MIT LICENSE:
@@ -143,17 +145,20 @@ $buffer = preg_replace($pattern, $replacement, $buffer);
 // Use DHTML to modify the DOM after the calendar loads
 $pattern = '/(<\/head>)/';
 $replacement = <<<RGC
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript">
+// switch to no-conflict mode (see http://docs.jquery.com/Using_jQuery_with_Other_Libraries)
+jQuery.noConflict();
+
 function restylegc() {
     // remove inline style from body so background-color can be set using the stylesheet
-    $('body').removeAttr('style');
+    jQuery('body').removeAttr('style');
 
     // iterate over each bubble and remove the width property from the style attribute
-    // so that the width can be set using the stylesheet
-    $('.bubble').each(function(){ 
+    // so that the width can be set using the stylesheet (for example, .bubble { width:400px; })
+    jQuery('.bubble').each(function(){ 
         style = $(this).attr('style').replace(/width: \d+px;?/i, ''); 
-        $(this).attr('style', style); 
+        jQuery(this).attr('style', style); 
     });
 
     // see jQuery documentation for other ways to edit DOM
