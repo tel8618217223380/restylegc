@@ -53,6 +53,7 @@
  *   13 November 2010 - Changed Google Calendar protocol to https
  *                      Switched back to jQuery
  *   03 June     2011 - Put jQuery in no-conflict mode
+ *   18 June     2011 - Fixed bug to remove width style from bubble
  *                      
  *   
  * ACKNOWLEDGMENTS:
@@ -157,7 +158,7 @@ function restylegc() {
     // iterate over each bubble and remove the width property from the style attribute
     // so that the width can be set using the stylesheet (for example, .bubble { width:400px; })
     jQuery('.bubble').each(function(){ 
-        style = $(this).attr('style').replace(/width: \d+px;?/i, ''); 
+        style = jQuery(this).attr('style').replace(/width: \d+px;?/i, ''); 
         jQuery(this).attr('style', style); 
     });
 
