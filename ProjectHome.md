@@ -1,0 +1,1 @@
+RESTYLEgc is a proxy script written in PHP that replaces the Google Calendar's stylesheet with a user-defined one.  The script also injects the jQuery JavaScript framework to allow the user to modify the DOM after the calendar loads.  Users can change colors, add/remove DOM elements, and even add event listeners.
